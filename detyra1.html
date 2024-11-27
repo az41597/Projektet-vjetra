@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detyra e Balancit</title>
+  </head>
+  <body>
+    <script>
+      let bateria = {
+        balanci: 0,
+
+        merrBalancin() {
+          return `Balanci aktual: ${this.balanci}E`;
+        },
+
+        mbushje1() {
+          if (this.balanci + 1 <= 100) {
+            this.balanci += 1;
+          } else {
+            this.balanci = 100;
+          }
+          console.log("Mbushur me 1E");
+        },
+
+        mbushje3() {
+          if (this.balanci + 3 <= 100) {
+            this.balanci += 3;
+          } else {
+            this.balanci = 100;
+          }
+          console.log("Mbushur me 3E");
+        },
+
+        mbushje5() {
+          if (this.balanci + 5 <= 100) {
+            this.balanci += 5;
+          } else {
+            this.balanci = 100;
+          }
+          console.log("Mbushur me 5E");
+        },
+
+        perdor() {
+          if (this.balanci - 5 >= 0) {
+            this.balanci -= 5;
+          } else {
+            this.balanci = 0;
+          }
+          console.log("Perdorur 5E nga balanci");
+        },
+      };
+
+      console.log(bateria.merrBalancin());
+      bateria.mbushje1();
+      console.log(bateria.merrBalancin());
+      bateria.mbushje3();
+      console.log(bateria.merrBalancin());
+      bateria.mbushje5();
+      console.log(bateria.merrBalancin());
+      bateria.perdor();
+      console.log(bateria.merrBalancin());
+      bateria.perdor();
+      console.log(bateria.merrBalancin());
+    </script>
+  </body>
+</html>
